@@ -73,5 +73,11 @@ export async function signin(req, res) {
 };
 
 export async function signout(req, res) {
-    res.send('Signin route');
+    try {
+        res.clearCookie('jwt-netflix-clone');
+        res.status(500).json({ success: true, message: 'Signed out successfully' });
+    } catch (error) {
+        console.log(`Error in signout controller: ${error}`);
+        res.status(500).json({ success: false, message: 'Internal server error' });
+    }
 };
