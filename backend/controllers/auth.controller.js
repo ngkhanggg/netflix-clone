@@ -1,6 +1,7 @@
 import bcryptjs from 'bcryptjs';
 
 import { User } from '../models/user.model.js';
+import { generateJWTAndSetCookie } from '../utils/generateJWT.js';
 
 export async function signup(req, res) {
     try {
@@ -50,6 +51,8 @@ export async function signup(req, res) {
             image: image
         });
 
+        generateJWTAndSetCookie(newUser._id, res);
+
         await newUser.save();
 
         // return a response
@@ -58,6 +61,7 @@ export async function signup(req, res) {
             success: true,
             user: {...newUser._doc, password:''}
         });
+
     } catch (error) {
         console.log(`Error in signup controller: ${error}`);
         res.status(500).json({ success: false, message: 'Internal server error' });
