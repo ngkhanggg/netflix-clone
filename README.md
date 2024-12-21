@@ -1,5 +1,13 @@
 # Netflix Clone
+
 A clone of Netflix built by following a tutorial video to learn and practice web development fundamentals and API integration.
+
+## Tech Stack
+
+![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-%23404D59.svg?style=for-the-badge&logo=express&logoColor=white)
+![React](https://img.shields.io/badge/React-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
 ## Instructions
 
@@ -30,8 +38,11 @@ A clone of Netflix built by following a tutorial video to learn and practice web
 6. Open the app at `http://localhost:5000` (or the port you configured)
 
 ## Disclaimer
+
 This project is built solely for education purposes and does not intend to replicate Netflix's services or infringe on any copyrights.
 
 ## Reference
+
 - This project was created by following [How To Build a Netflix Clone with MERN Stack - Full Course](https://youtu.be/gRroBZczKAU?si=iVVVDA0LpsgV81RD)
+
 - Movies are from [TMDB API](https://developer.themoviedb.org/reference/intro/getting-started)
