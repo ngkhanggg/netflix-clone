@@ -31,4 +31,4 @@ A clone of Netflix built by following a tutorial video to learn and practice web
 This project is built solely for education purposes and does not intend to replicate Netflix's services or infringe on any copyrights.
 
 ## Reference
-This project was created by following [How To Build a Netflix Clone with MERN Stack - Full Course](https://youtu.be/gRroBZczKAU?si=iVVVDA0LpsgV81RD) by [As a Programmer](https://www.youtube.com/@asaprogrammer_)
+This project was created by following [How To Build a Netflix Clone with MERN Stack - Full Course](https://youtu.be/gRroBZczKAU?si=iVVVDA0LpsgV81RD)
