@@ -12,11 +12,13 @@ export async function searchPerson(req, res) {
 
         await User.findByIdAndUpdate(req.user._id, {
             $push: {
-                id: response.results[0].id,
-                image: response.results[0].profile_path,
-                title: response.results[0].name,
-                searchType: 'person',
-                createdAt: new Date()
+                searchHistory: {
+                    id: response.results[0].id,
+                    image: response.results[0].profile_path,
+                    title: response.results[0].name,
+                    searchType: 'person',
+                    createdAt: new Date()
+                }
             }
         });
 
@@ -38,11 +40,13 @@ export async function searchMovie(req, res) {
 
         await User.findByIdAndUpdate(req.user._id, {
             $push: {
-                id: response.results[0].id,
-                image: response.results[0].poster_path,
-                title: response.results[0].title,
-                searchType: 'movie',
-                createdAt: new Date()
+                searchHistory: {
+                    id: response.results[0].id,
+                    image: response.results[0].poster_path,
+                    title: response.results[0].title,
+                    searchType: 'movie',
+                    createdAt: new Date()
+                }
             }
         });
 
@@ -64,17 +68,19 @@ export async function searchTv(req, res) {
 
         await User.findByIdAndUpdate(req.user._id, {
             $push: {
-                id: response.results[0].id,
-                image: response.results[0].poster_path,
-                title: response.results[0].name,
-                searchType: 'tv',
-                createdAt: new Date()
+                searchHistory: {
+                    id: response.results[0].id,
+                    image: response.results[0].poster_path,
+                    title: response.results[0].name,
+                    searchType: 'tv',
+                    createdAt: new Date()
+                }
             }
         });
 
         res.status(200).json({ success: true, content: response.results });
     } catch (error) {
-        console.log(`Error in searchPerson controller: ${error}`);
+        console.log(`Error in searchTv controller: ${error}`);
         res.status(500).json({ success: false, message: "Internal server error" });
     }
 };
