@@ -84,3 +84,29 @@ export async function searchTv(req, res) {
         res.status(500).json({ success: false, message: "Internal server error" });
     }
 };
+
+export async function getSearchHistory(req, res) {
+    try {
+        res.status(200).json({ success: true, content: req.user.searchHistory });
+    } catch (error) {
+        console.log(`Error in getSearchHistory controller: ${error}`);
+        res.status(500).json({ success: false, message: "Internal server error" });
+    }
+};
+
+export async function deleteSearchHistory(req, res) {
+    let { id } = req.params;
+    id = parseInt(id);
+    try {
+        await User.findByIdAndUpdate(req.user._id, {
+            $pull: {
+                searchHistory: { id: id }
+            }
+        });
+
+        res.status(200).json({ success: true, message: "Search history deleted" });
+    } catch (error) {
+        console.log(`Error in deleteSearchHistory controller: ${error}`);
+        res.status(500).json({ success: false, message: "Internal server error" });
+    }
+};
