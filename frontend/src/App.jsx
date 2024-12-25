@@ -3,7 +3,6 @@ import HomePage from './pages/HomePage.jsx';
 import SignInPage from './pages/SignInPage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
 
-
 export default function App() {
   return (
     <Routes>
