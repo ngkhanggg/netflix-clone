@@ -13,6 +13,6 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         - name: Build the Docker image for the backend
-            run: docker build -t my-image-name-backend:$(date +%s) -f backend/Dockerfile .
+            run: docker build -t my-image-name-backend:$(date '+%s') -f backend/Dockerfile .
         - name: Build the Docker image for the frontend
-            run: docker build -t my-image-name-frontend:$(date +%s) -f frontend/Dockerfile .
+            run: docker build -t my-image-name-frontend:$(date '+%s') -f frontend/Dockerfile .
