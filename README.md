@@ -15,4 +15,4 @@ This project is built solely for education purposes and does not intend to repli
 
 ## Reference
 
-- This project was created by following [How To Build a Netflix Clone with MERN Stack - Full Course](https://youtu.be/gRroBZczKAU?si=iVVVDA0LpsgV81RD)
+This project was created by following [How To Build a Netflix Clone with MERN Stack - Full Course](https://youtu.be/gRroBZczKAU?si=iVVVDA0LpsgV81RD)
