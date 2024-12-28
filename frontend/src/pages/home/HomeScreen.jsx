@@ -34,6 +34,11 @@ const HomeScreen = () => {
       {/* Trending */}
       <div className="relative h-screen text-white">
         <Navbar />
+
+        {imageLoading && (
+          <div className="absolute top-0 left-0 w-full h-full bg-black/70 flexx items-center justifycenter shimmer -z-10"/>
+        )}
+
         <img
           src={ORIGINAL_IMG_BASE_URL + trendingContent?.backdrop_path}
           alt="Image"
