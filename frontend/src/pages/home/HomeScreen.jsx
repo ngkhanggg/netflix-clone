@@ -1,14 +1,11 @@
-import { Info, Play } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Info, Play } from 'lucide-react'
 
 import Navbar from '../../components/Navbar'
 import MovieSlider from '../../components/MovieSlider'
-
 import useGetTrendingContent from '../../hooks/useGetTrendingContent'
-
 import { useContentStore } from '../../store/content'
-
 import { ORIGINAL_IMG_BASE_URL, MOVIE_CATEGORIES, TV_CATEGORIES } from '../../utils/constants'
 
 const HomeScreen = () => {

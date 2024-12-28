@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react"
-import { useContentStore } from "../store/content"
 import axios from "axios"
-import { SMALL_IMG_BASE_URL } from "../utils/constants"
 import { Link } from "react-router-dom"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useContentStore } from "../store/content"
+import { SMALL_IMG_BASE_URL } from "../utils/constants"
 
 const MovieSlider = ({ category }) => {
   const { contentType } = useContentStore()

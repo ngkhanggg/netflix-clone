@@ -1,13 +1,12 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
+import { Loader } from 'lucide-react';
 import HomePage from './pages/home/HomePage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import Footer from './components/Footer';
-import { Toaster } from 'react-hot-toast';
 import { useAuthStore } from './store/authUser';
-import { useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
-import { Loader } from 'lucide-react';
 
 export default function App() {
   const { user, isCheckingAuth, authCheck } = useAuthStore()
