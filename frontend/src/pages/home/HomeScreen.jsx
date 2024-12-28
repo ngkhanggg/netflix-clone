@@ -83,6 +83,10 @@ const HomeScreen = () => {
           </div>
         </div>
       </div>
+
+      <div className="flex flex-col gap-10 bg-black py-10">
+        {categories.map((category) => (<MovieSlider key={category} category={category}/>))}
+      </div>
     </>
   )
 }
