@@ -5,6 +5,7 @@ import { Loader } from 'lucide-react';
 import HomePage from './pages/home/HomePage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
+import WatchPage from './pages/WatchPage';
 import Footer from './components/Footer';
 import { useAuthStore } from './store/authUser';
 
@@ -31,6 +32,7 @@ export default function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/signup' element={user ? <Navigate to={"/"} /> : <SignUpPage />} />
         <Route path='/signin' element={user ? <Navigate to={"/"} /> : <SignInPage />} />
+        <Route path='/watch/:id' element={user ? <WatchPage /> : <Navigate to={"/signin"} />} />
       </Routes>
       <Footer />
       <Toaster />
