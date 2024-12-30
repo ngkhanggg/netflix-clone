@@ -93,7 +93,7 @@ const SearchPage = () => {
                                         </h2>
                                     </div>
                                 ) : (
-                                    <div>
+                                    <div onClick={() => {setContentType(activeTab)}}>
                                         <img
                                             src={ORIGINAL_IMG_BASE_URL + result.poster_path}
                                             alt={result.title || result.name}
