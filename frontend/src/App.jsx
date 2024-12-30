@@ -7,6 +7,7 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import WatchPage from './pages/WatchPage';
 import SearchPage from './pages/SearchPage';
+import SearchHistoryPage from './pages/SearchHistoryPage';
 import Footer from './components/Footer';
 import { useAuthStore } from './store/authUser';
 
@@ -35,6 +36,7 @@ export default function App() {
         <Route path='/signin' element={user ? <Navigate to={"/"} /> : <SignInPage />} />
         <Route path='/watch/:id' element={user ? <WatchPage /> : <Navigate to={"/signin"} />} />
         <Route path='/search/' element={user ? <SearchPage /> : <Navigate to={"/signin"} />} />
+        <Route path='/history/' element={user ? <SearchHistoryPage /> : <Navigate to={"/signin"} />} />
       </Routes>
       <Footer />
       <Toaster />
