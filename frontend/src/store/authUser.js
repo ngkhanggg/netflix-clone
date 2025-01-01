@@ -1,13 +1,13 @@
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import {create} from 'zustand';
+import { create } from 'zustand';
 
 export const useAuthStore = create((set) => ({
     user: null,
     isSigningUp: false,
     isCheckingAuth: true,
     isSigningOut: false,
-    isSigningIn: true,
+    isSigningIn: false,
 
     signup: async(credentials) => {
         set({isSigningUp: true});
